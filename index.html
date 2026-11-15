@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmed Al-Kinani | Statistics &amp; Data Analysis</title>
+<meta name="description" content="Portfolio of Ahmed Al-Kinani, Statistics Specialist student at the University of Toronto Mississauga.">
+<style>
+  :root {
+    --bg: #fafaf7; --surface: #ffffff; --text: #1d2330; --muted: #5b6475;
+    --line: #e4e6ec; --accent: #1f5fbf; --accent-soft: #e8f0fc; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1218; --surface: #171b24; --text: #e8ebf2; --muted: #9aa3b5;
+      --line: #262c39; --accent: #7fb0ff; --accent-soft: #1b2740; color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 22px; }
+  nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+  nav .brand { font-weight: 700; color: var(--text); white-space: nowrap; }
+  nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { color: var(--muted); }
+  nav ul a:hover { color: var(--text); text-decoration: none; }
+  header.hero { padding: 72px 0 48px; }
+  .eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.1; margin: 10px 0 16px; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 0 26px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  }
+  .btn:hover { text-decoration: none; border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 22px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px; display: flex; flex-direction: column;
+  }
+  .card.featured { grid-column: 1 / -1; }
+  .card h3 { margin: 0 0 6px; font-size: 19px; }
+  .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+  .card ul { margin: 0 0 14px; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .card li { margin-bottom: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag { background: var(--accent-soft); color: var(--accent); padding: 2px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .links { margin-top: auto; display: flex; gap: 16px; font-weight: 600; font-size: 15px; }
+  .card img { width: 100%; border-radius: 8px; border: 1px solid var(--line); margin-bottom: 14px; background: var(--bg); }
+  .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+  .skills h3 { margin: 0 0 6px; font-size: 16px; }
+  .skills p { margin: 0; color: var(--muted); font-size: 15px; }
+  .job { margin-bottom: 22px; }
+  .job .top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; font-weight: 600; }
+  .job .when { color: var(--muted); font-weight: 400; }
+  .job ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
+  footer { padding: 32px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) { nav ul { gap: 14px; font-size: 14px; } nav ul li:nth-child(2), nav ul li:nth-child(3) { display: none; } header.hero { padding-top: 48px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Ahmed Al-Kinani</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Statistics Specialist &middot; UTM &middot; Milton, Ontario</div>
+    <h1>I clean data, check it carefully, and explain what it says.</h1>
+    <p class="lead">
+      I'm a third-year Statistics Specialist student at the University of Toronto Mississauga with minors in
+      Computer Science and Mathematics. I'm looking for data analyst and research analyst co-op roles, and the
+      projects below show how I work with Python, R, SQL, and Excel.
+    </p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="https://github.com/ahmedalkinani455">GitHub</a>
+      <a class="btn" href="https://thundersniper.substack.com">Substack</a>
+      <a class="btn" href="mailto:ahmedalkinani455@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <article class="card featured">
+        <img src="images/peel-maps.png" alt="Maps of Peel Region median income and regression residuals" onerror="this.style.display='none'">
+        <h3>Peel Region: Income vs. Population Density</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">geopandas</span><span class="tag">statsmodels</span><span class="tag">Spatial statistics</span></div>
+        <p>Does population density predict household income across Peel Region, and do the results have a geographic pattern?</p>
+        <ul>
+          <li>Analyzed 272 census tracts: income is spatially clustered (Global Moran's I = 0.19), while density clusters only weakly (0.07).</li>
+          <li>Regressed income on density (R&sup2; = 0.08, about $2,750 lower income per 1,000 more people/km&sup2;) and showed the residuals were still clustered (Moran's I = 0.21), so spatial regression is the next step.</li>
+          <li>Recomputed density in a projected coordinate system after finding that Web Mercator inflates tract areas by about 1.9&times; at this latitude.</li>
+        </ul>
+        <div class="links"><a href="https://github.com/ahmedalkinani455/peel-income-density-analysis">Code &amp; write-up &rarr;</a></div>
+      </article>
+
+      <article class="card">
+        <h3>EPL Match Outcome Model</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span></div>
+        <p>A logistic regression that predicts home win, draw, or away win from each team's recent scoring and conceding form.</p>
+        <ul>
+          <li>Used four seasons of results and a time-based split: trained on 2021/22 to 2023/24, tested on 2024/25.</li>
+          <li>Excluded each match from its own form numbers to avoid leakage, and caught a bug that flipped away teams' goals by hand-checking features.</li>
+          <li>48.0% accuracy against a 41.1% always-home-win baseline. The model never predicts draws, which the README discusses.</li>
+        </ul>
+        <div class="links"><a href="https://github.com/ahmedalkinani455/epl-match-outcome-predictor">GitHub &rarr;</a></div>
+      </article>
+
+      <article class="card">
+        <h3>Does Defending Really Start From the Front?</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">Published analysis</span></div>
+        <p>A Substack article testing whether more intense pressing goes with fewer goals conceded.</p>
+        <ul>
+          <li>Two seasons of team data across Europe's top five leagues, ten simple linear regressions in R.</li>
+          <li>A positive relationship in all ten, but statistical significance in only 5.</li>
+          <li>Limitations stated plainly: 18 to 20 teams per model, association rather than causation, multiple comparisons.</li>
+        </ul>
+        <div class="links"><a href="https://thundersniper.substack.com/p/does-defending-really-start-from">Read the article &rarr;</a></div>
+      </article>
+
+      <article class="card">
+        <h3>Healthcare Analytics Dashboard</h3>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">Pivot tables</span><span class="tag">Slicers</span></div>
+        <p>An interactive KPI dashboard built on a 55,000+ row healthcare dataset.</p>
+        <ul>
+          <li>Cleaned and validated the data for accuracy and consistency before any analysis.</li>
+          <li>Built pivot tables, slicers, and KPI cards covering BMI, blood pressure, heart rate, and lifestyle trends.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Healthcare SQL Analysis</h3>
+        <div class="tags"><span class="tag">MySQL</span><span class="tag">Window functions</span></div>
+        <p>Ad hoc analysis of 50,000+ patient records.</p>
+        <ul>
+          <li>Used JOINs, subqueries, and window functions to compare high-risk patient metrics against overall averages.</li>
+          <li>Segmented patients into groups with GROUP BY and CASE statements.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Telecom Market Analysis</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">OLS regression</span></div>
+        <p>My first end-to-end Python project.</p>
+        <ul>
+          <li>Cleaned and joined structured data in pandas, then built an OLS regression model with R&sup2; = 0.87.</li>
+          <li>Wrote up the findings in plain language for a non-technical reader.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Data cleaning &amp; QA</h3><p>Validating datasets, checking outputs against known values, flagging inconsistencies.</p></div>
+      <div><h3>Python &amp; R</h3><p>pandas, scikit-learn, geopandas, statsmodels, matplotlib, seaborn; linear regression in R.</p></div>
+      <div><h3>SQL</h3><p>JOINs, subqueries, window functions, aggregations (MySQL, PostgreSQL).</p></div>
+      <div><h3>Excel</h3><p>Dashboards, pivot tables, slicers, KPI measures.</p></div>
+      <div><h3>Statistics</h3><p>Hypothesis testing, regression, spatial autocorrelation.</p></div>
+      <div><h3>Communication</h3><p>Plain-language documentation, project READMEs, published analysis.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience &amp; education</h2>
+    <div class="job">
+      <div class="top"><span>Facilitated Study Group Leader, University of Toronto Mississauga</span><span class="when">Jan 2026 &ndash; Present</span></div>
+      <ul>
+        <li>Lead weekly sessions for first-year math courses (MAT134/136, MAT223), explaining concepts in plain language to groups with very different starting points.</li>
+        <li>Built structured session materials and tracked participant progress, working with two co-facilitators on a recurring schedule.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="top"><span>B.Sc. Statistics Specialist, University of Toronto Mississauga</span><span class="when">CGPA 3.42</span></div>
+      <ul><li>Minors in Computer Science and Mathematics. Coursework includes Probability &amp; Statistics, Databases, Data Structures, and GeoSpatial Data Science I.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p class="lead" style="margin-bottom:18px">I'm happy to talk about data analyst and research analyst co-op opportunities.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:ahmedalkinani455@gmail.com">ahmedalkinani455@gmail.com</a>
+      <a class="btn" href="https://github.com/ahmedalkinani455">GitHub</a>
+      <a class="btn" href="https://thundersniper.substack.com">Substack</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Ahmed Al-Kinani</div>
+</footer>
+
+</body>
+</html>
